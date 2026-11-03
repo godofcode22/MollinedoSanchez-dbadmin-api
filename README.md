@@ -60,8 +60,8 @@ La API cuenta con los 5 métodos CRUD requeridos (`GETBYID`, `GETALL`, `POST`, `
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/godofcode22/api-mollinedo.git
-   cd api-mollinedo
+   git clone https://github.com/godofcode22/MollinedoSanchez-dbadmin-api.git
+   cd MollinedoSanchez-dbadmin-api
    ```
 
 2. **Instalar dependencias:**
