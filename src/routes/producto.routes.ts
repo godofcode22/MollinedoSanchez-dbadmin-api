@@ -1,8 +1,28 @@
 import { Router } from "express";
-import { getProducto } from "../controllers/producto.controller.js";
-import { createProducto } from "../controllers/producto.controller.js";
-const router = Router();
-router.get("/", getProducto);
-router.post("/create", createProducto);
-export default router;
+import {
+    getAllProductos,
+    getProductoById,
+    createProducto,
+    updateProducto,
+    deleteProducto
+} from "../controllers/producto.controller.js";
 
+const router = Router();
+
+// GETALL: Obtener todos los productos
+router.get("/", getAllProductos);
+
+// GETBYID: Obtener producto por ID
+router.get("/:id", getProductoById);
+
+// POST: Crear nuevo producto
+router.post("/", createProducto);
+router.post("/create", createProducto);
+
+// PUT: Actualizar producto existente por ID
+router.put("/:id", updateProducto);
+
+// DELETE: Eliminar producto por ID
+router.delete("/:id", deleteProducto);
+
+export default router;
