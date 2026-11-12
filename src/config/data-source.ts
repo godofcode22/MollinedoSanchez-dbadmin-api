@@ -1,9 +1,5 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { Categoria } from "../entity/Categoria.js";
-import { Producto } from "../entity/Producto.js";
-import { Venta } from "../entity/Venta.js";
-import { DetalleVenta } from "../entity/DetalleVenta.js";
 import { Cliente } from "../entity/Cliente.js";
 import { Direccion } from "../entity/Direccion.js";
 import { Almacen } from "../entity/Almacen.js";
@@ -22,10 +18,6 @@ export const AppDataSource = new DataSource({
     synchronize: false,
     logging: true,
     entities: [
-        Categoria,
-        Producto,
-        Venta,
-        DetalleVenta,
         Cliente,
         Direccion,
         Almacen,
