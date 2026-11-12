@@ -26,3 +26,4 @@ router.put("/:id", updateVenta);
 router.delete("/:id", deleteVenta);
 
 export default router;
+

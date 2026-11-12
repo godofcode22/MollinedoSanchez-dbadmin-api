@@ -114,3 +114,4 @@ export const deleteVenta = async (req: Request, res: Response) => {
         return res.status(500).json({ message: "Error al eliminar la venta", error: error.message });
     }
 };
+
