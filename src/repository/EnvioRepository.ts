@@ -33,6 +33,8 @@ export class EnvioRepository {
     async findActivosQueryBuilder(): Promise<Envio[]> {
         return await this.repository
             .createQueryBuilder("envio")
+            .leftJoinAndSelect("envio.remitente", "remitente")
+            .leftJoinAndSelect("envio.destinatario", "destinatario")
             .leftJoinAndSelect("envio.paquetes", "paquetes")
             .where("envio.estado_global IN (:...estados)", {
                 estados: ["REGISTRADO", "EN_TRANSITO"],
